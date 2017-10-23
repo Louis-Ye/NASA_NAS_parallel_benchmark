@@ -1,5 +1,5 @@
 attrNum=12
 measuresNum=1
-tuplesNum=100
+tuplesNum=125000
 INVERSE_ENDIAN=0
 fileName=ADC
