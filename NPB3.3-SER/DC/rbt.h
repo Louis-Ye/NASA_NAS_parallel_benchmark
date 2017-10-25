@@ -29,16 +29,13 @@ typedef struct RBTree{
   unsigned char * memPool;
 } RBTree;
 
-inline struct treeNode * record_malloc(int size, struct treeNode * addr)
-{
-  return addr;
-}
+void record_malloc(int num, int size, treeNode * addr);
 
 #define NEW_TREE_NODE(node_ptr,memPool,memaddr,treeNodeSize, \
  freeNodeCounter,memoryIsFull) \
  node_ptr=(struct treeNode*)(memPool+memaddr); \
- node_ptr=record_malloc(treeNodeSize, node_ptr); \
  memaddr+=treeNodeSize; \
+ record_malloc(1, treeNodeSize, node_ptr);\
  (freeNodeCounter)--; \
  if( freeNodeCounter == 0 ) { \
      memoryIsFull = 1; \

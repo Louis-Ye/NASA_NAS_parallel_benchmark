@@ -4,6 +4,9 @@
 #include "adc.h"
 #include "macrodef.h"
 
+void record_malloc(int num, int size, treeNode * addr)
+{}
+
 int32 KeyComp( const uint32 *a, const uint32 *b, uint32 n ) {
   uint32 i;
   for ( i = 0; i < n; i++ ) {
